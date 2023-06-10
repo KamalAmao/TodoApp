@@ -1,0 +1,43 @@
+
+JAVA 8 FEATURES
+ - FUNCTIONAL INTERFACE
+ - LAMBDA
+ - DATE API
+ - COMPLETABLE FUTURE
+ - STREAM API
+
+
+ ...in future, you will learn how to build custom annotation
+
+STREAM - Is a collection of objects, supported by various method. It is NOT a datatype.
+       - collect()
+       - max()
+       - filter()
+       - forEach()
+
+
+=> FUNCTIONAL INTERFACE: It is an interface with one abstract method, it can also contain any number of default and static method
+   e.g Runnable, Callable, Comparator
+
+   @FunctionalInterface
+   interface KamalPayment{
+    public void payWithCard();
+    default double getBalance(){
+
+    }
+    static void paymentData(Date date){
+
+    }
+   }
+
+   Functional Interface can be extended BUT it will be flagged as an error by the compiler because you can't have more than one abstract method in a FI
+
+   In Java 8, we have 4 FI
+    - Function (R apply(T t): Use this interface when you want to extract a data from an existing data
+    - Supplier (T get()): Use this interface when you want to create a new object
+    - Consumer (void accept(T t)): Use this interface when you want to perform some operation on an object.
+    - Predicate (boolean test(T t)): Use this interface when you want to evaluate a boolean expression which takes an argument T t
+
+=> LAMBDA EXPRESSION: Basically express instance of a functional interface, it makes us to write a minimalistic code, a well defined and structure code.
+   e.g ->
+
